@@ -102,7 +102,8 @@ with col2:
 cont = st.container()
 with cont:
     st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
-                                          
+    st.chat_input("Wazzup Homie?")
+    
     # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
