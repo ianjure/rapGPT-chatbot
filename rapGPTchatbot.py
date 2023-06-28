@@ -114,7 +114,6 @@ with cont:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    st.markdown('***')
     # React to user input
     if prompt := st.chat_input("Wazzup Homie?"):
         # Display user message in chat message container
@@ -129,5 +128,7 @@ with cont:
             st.markdown(response)
         # Add assistant response to chat history
         st.session_state.messages.append({"role": "assistant", "content": response})
+
+st.markdown('***')
 
 #Developed by Ian Jure Macalisang
