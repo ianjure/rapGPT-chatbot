@@ -1,6 +1,8 @@
+import json
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
+from streamlit_lottie import *
 
 
 #Resources
@@ -11,7 +13,7 @@ passwd = st.secrets['passwd']
 # Page Configuration
 st.set_page_config (
     page_title = "RapGPT Chatbot",
-    page_icon = ":robot:",
+    page_icon = ":speech_balloon:",
     initial_sidebar_state = "collapsed"
     )
 
@@ -56,6 +58,10 @@ hide_streamlit_style = """
     """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+#Adding Lottiefile
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
 
 # Log in to huggingface and grant authorization to huggingchat
 sign = Login(email, passwd)
@@ -71,7 +77,13 @@ chatbot = hugchat.ChatBot(cookies=cookies.get_dict())  # or cookie_path="usercoo
 id = chatbot.new_conversation()
 chatbot.change_conversation(id)
 
-st.markdown("# :robot: RapGPT Chatbot", unsafe_allow_html = True)
+lottie_anim = load_lottiefile('robot_anim.json')
+
+col1, col2, col3 = st.columns([50,20,60])
+with col1:
+    st.title('RapGPT Chatbot')
+with col2:
+    st_lottie(lottie_anim1, loop = True, quality = 'high')
 
 # Initialize chat history
 if "messages" not in st.session_state:
