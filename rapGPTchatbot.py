@@ -84,9 +84,12 @@ with col1:
     st.markdown('')
     st.markdown('')
     st.markdown('')
+    st.markdown('')
     st.title('RapGPT Chatbot')
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
+
+st.markdown('***')
 
 # Initialize chat history
 if "messages" not in st.session_state:
