@@ -56,7 +56,18 @@ hide_streamlit_style = """
     }
     </style>
     """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+st.markdown("""
+    <style>
+    .block-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 #Adding Lottiefile
 def load_lottiefile(filepath: str):
