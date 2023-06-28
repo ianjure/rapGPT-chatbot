@@ -79,7 +79,7 @@ chatbot.change_conversation(id)
 
 lottie_anim = load_lottiefile('robot_anim.json')
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([80,50])
 with col1:
     st.title('RapGPT Chatbot')
 with col2:
