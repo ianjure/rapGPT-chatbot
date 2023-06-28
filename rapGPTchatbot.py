@@ -79,13 +79,11 @@ chatbot.change_conversation(id)
 
 lottie_anim = load_lottiefile('robot_anim.json')
 
-col1, col2 = st.columns([80,30])
+col1, col2 = st.columns([70,30])
 with col1:
     st.markdown('')
     st.markdown('')
-    st.markdown('')
-    st.title('RapGPT')
-    st.markdown('## Chatbot')
+    st.title('RapGPT Chatbot')
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
