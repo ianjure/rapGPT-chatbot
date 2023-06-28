@@ -1,5 +1,4 @@
 streamlit
 hugchat
-hugchat-login
 streamlit-chat
 streamlit-extras
