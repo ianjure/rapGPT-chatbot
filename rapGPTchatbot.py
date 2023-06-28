@@ -88,30 +88,32 @@ with col1:
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
-st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
-                                      
-# Initialize chat history
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-# Display chat messages from history on app rerun
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# React to user input
-if prompt := st.chat_input("Wazzup Homie?"):
-    # Display user message in chat message container
-    st.chat_message("user").markdown(prompt)
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
-
-    response = chatbot.chat(f'Answer this in a rap verse style using 1 to 2 sentences only: yo {prompt} homie')
-
-    # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        st.markdown(response)
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
+cont = st.container()
+    with cont:
+    st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
+                                          
+    # Initialize chat history
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+    
+    # Display chat messages from history on app rerun
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
+    
+    # React to user input
+    if prompt := st.chat_input("Wazzup Homie?"):
+        # Display user message in chat message container
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+    
+        response = chatbot.chat(f'Answer this in a rap verse style using 1 to 2 sentences only: yo {prompt} homie')
+    
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": response})
 
 #Developed by Ian Jure Macalisang
