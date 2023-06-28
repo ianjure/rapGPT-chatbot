@@ -1,4 +1,5 @@
 import json
+import time
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
@@ -127,5 +128,6 @@ if prompt := st.chat_input("Yo! I am RapGPT. A chatbot with a rapper-like person
         st.markdown(response)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+    time.sleep(20)
 
 #Developed by Ian Jure Macalisang
