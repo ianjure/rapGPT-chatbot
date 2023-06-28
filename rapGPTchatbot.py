@@ -88,7 +88,7 @@ with col1:
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
-st.chat_message("assistant").markdown('Yo! I am RapGPT, a chatbot with a rapper-like personality! Ask me anything homie!")
+st.chat_message("assistant").markdown('Yo! I am RapGPT, a chatbot with a rapper-like personality! Ask me anything homie!')
                                       
 # Initialize chat history
 if "messages" not in st.session_state:
