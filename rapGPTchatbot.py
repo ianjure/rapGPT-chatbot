@@ -83,7 +83,7 @@ col1, col2, col3 = st.columns([50,20,60])
 with col1:
     st.title('RapGPT Chatbot')
 with col2:
-    st_lottie(lottie_anim1, loop = True, quality = 'high')
+    st_lottie(lottie_anim, loop = True, quality = 'high')
 
 # Initialize chat history
 if "messages" not in st.session_state:
