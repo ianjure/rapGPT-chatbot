@@ -97,7 +97,7 @@ with col1:
     st.markdown('')
     st.title('RapGPT Chatbot')
     creator = '<a href="https://github.com/ianjure" style="text-decoration: none; color: skyblue;">Ian Jure Macalisang</a>'
-    st.markdown(f""" Developed by ***{creator}*** """, unsafe_allow_html = True)
+    st.markdown.info(f""" Developed by ***{creator}*** """, unsafe_allow_html = True)
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
