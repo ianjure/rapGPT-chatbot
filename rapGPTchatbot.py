@@ -85,7 +85,7 @@ with col1:
     st.markdown('')
     st.markdown('')
     st.title('RapGPT')
-    st.markdown('##Chatbot')
+    st.markdown('## Chatbot')
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
