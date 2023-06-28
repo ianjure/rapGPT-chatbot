@@ -104,7 +104,7 @@ if prompt := st.chat_input("Wazzup Homie?"):
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
 
-    response = chatbot.chat(f'Answer this in a rap verse style using 1 to 2 sentences only: {prompt}')
+    response = chatbot.chat(f'Answer this in a rap verse style using 1 to 2 sentences only: yo {prompt} homie')
 
     # Display assistant response in chat message container
     with st.chat_message("assistant"):
