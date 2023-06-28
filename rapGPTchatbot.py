@@ -130,11 +130,4 @@ if prompt := st.chat_input("Wazzup homie!"):
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
 
-# Display chat messages from history on app rerun
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-time.sleep(2)
-
 #Developed by Ian Jure Macalisang
