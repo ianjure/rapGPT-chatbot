@@ -102,14 +102,21 @@ with col1:
 with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
-#st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
+st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
     
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+# Display chat messages from history on app rerun
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+time.sleep(2)
+
 # React to user input
-if prompt := st.chat_input("Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!"):
+if prompt := st.chat_input("Wazzup homie!"):
     # Display user message in chat message container
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
