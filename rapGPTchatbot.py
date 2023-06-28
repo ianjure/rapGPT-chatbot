@@ -11,7 +11,7 @@ passwd = st.secrets['passwd']
 # Page Configuration
 st.set_page_config (
     page_title = "RapGPT Chatbot",
-    page_icon = ":speech_balloon:",
+    page_icon = ":robot:",
     initial_sidebar_state = "collapsed"
     )
 
