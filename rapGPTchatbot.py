@@ -71,7 +71,7 @@ chatbot = hugchat.ChatBot(cookies=cookies.get_dict())  # or cookie_path="usercoo
 id = chatbot.new_conversation()
 chatbot.change_conversation(id)
 
-st.markdown(":robot: RapGPT Chatbot")
+st.markdown("# :robot: RapGPT Chatbot", unsafe_allow_html = True)
 
 # Initialize chat history
 if "messages" not in st.session_state:
