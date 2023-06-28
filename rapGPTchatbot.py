@@ -89,7 +89,7 @@ with col2:
     st_lottie(lottie_anim, loop = True, quality = 'high')
 
 cont = st.container()
-    with cont:
+with cont:
     st.chat_message("assistant").markdown('Yo! I am RapGPT. A chatbot with a rapper-like personality. Ask me anything homie!')
                                           
     # Initialize chat history
