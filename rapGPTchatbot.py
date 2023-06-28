@@ -113,7 +113,8 @@ with cont:
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-    
+
+    st.markdown('***')
     # React to user input
     if prompt := st.chat_input("Wazzup Homie?"):
         # Display user message in chat message container
