@@ -1,0 +1,6 @@
+[theme]
+base = "dark"
+primaryColor = "#0e83a4"
+secondaryBackgroundColor= 'transparent'
+backgroundColor = 'transparent'
+font = "sans serif"
